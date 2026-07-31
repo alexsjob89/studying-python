@@ -1,3 +1,6 @@
-is_logged_in = True
-if is_logged_in:
-    print("welcome back!!")
+a = 45
+b = 33
+if b > a:
+    print("b is greater than a")
+elif a == b:
+    print("a is equal to b")
