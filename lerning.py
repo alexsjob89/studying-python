@@ -50,7 +50,7 @@ elif day == 7:
     print("Sunday")
 """
 
-a = 200
+a = 600
 b = 23
 if b < a:
     print("b is less than a")
