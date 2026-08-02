@@ -47,15 +47,15 @@ surname = "Dorultan"
 display_name = user_name if user_name else f"{name} {surname}"
 print("Welcome,", display_name)
 """
-"""
-a = 300
-b = 300
-c = 300
-if a == b and c == a:
-    print("All conditions are equal.")
+
+a = 30
+b = 30
+c = 24
+if not a > b:
+    print("a is NOT greater than b")
 else:
-    print("None of them are equal.")
-    """
+    print("a is greater than c")
+    
 
 
 
