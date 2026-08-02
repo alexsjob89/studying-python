@@ -48,13 +48,14 @@ display_name = user_name if user_name else f"{name} {surname}"
 print("Welcome,", display_name)
 """
 
-a = 30
-b = 30
-c = 24
-if not a > b:
-    print("a is NOT greater than b")
+age = 20
+is_student = False
+has_discount_code = True
+
+if (age > 18 or age < 65) and not is_student or has_discount_code:
+    print("Discount applies!!!")
 else:
-    print("a is greater than c")
+    print("No discount available.")
     
 
 
