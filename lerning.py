@@ -47,15 +47,24 @@ surname = "Dorultan"
 display_name = user_name if user_name else f"{name} {surname}"
 print("Welcome,", display_name)
 """
+"""
+temperature = 25
+is_raining = True
+is_weekend = True
 
-age = 20
-is_student = False
-has_discount_code = True
+if (temperature < 20 and is_raining) or is_weekend:
+    print("Great day for outdoor activities!!")
+"""
 
-if (age > 18 or age < 65) and not is_student or has_discount_code:
-    print("Discount applies!!!")
+user_name = "Alex"
+password = "123456"
+is_veified = False
+
+if user_name and password and is_veified:
+    print("You're logged in!!")
 else:
-    print("No discount available.")
+    print("Error: Invalid credentials or account not verified.")
+
     
 
 
