@@ -21,7 +21,15 @@ else:
 
 username = "Alex"
 
+"""
 if len(username) > 0:
     print(f"Welcone, {username}!")
 else:
     print(f"Error: Username {username} cannot be found!")
+"""
+
+a = 410
+b = 325
+
+begger = a if a > b else b
+print("begger is", begger)
