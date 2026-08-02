@@ -27,9 +27,23 @@ if len(username) > 0:
 else:
     print(f"Error: Username {username} cannot be found!")
 """
-
+"""
 a = 410
-b = 325
+b = 512
 
-begger = a if a > b else b
-print("begger is", begger)
+print("a") if a < b else print("b") if a > b else print("b")
+"""
+"""
+x = 15
+y = 23
+max_value = x if x > y else y
+print("The maximum value is:", max_value)
+"""
+
+user_name = ""
+name = "Alex"
+surname = "Dorultan"
+
+display_name = user_name if user_name else f"{name} {surname}"
+print("Welcome,", display_name)
+
