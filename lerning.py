@@ -55,7 +55,7 @@ is_weekend = True
 if (temperature < 20 and is_raining) or is_weekend:
     print("Great day for outdoor activities!!")
 """
-
+"""
 user_name = "Alex"
 password = "123456"
 is_veified = False
@@ -64,6 +64,29 @@ if user_name and password and is_veified:
     print("You're logged in!!")
 else:
     print("Error: Invalid credentials or account not verified.")
+"""
+"""
+score = 23
+
+if score >= 0 and score <= 15:
+    print("Valid score")
+else:
+    print("Invalid score")
+"""
+
+age = 20
+has_license = False
+
+if age >= 18:
+    if has_license:
+        print("You can drive")
+    else:
+        print("You need a license to drive")
+else:
+    print("You are too young to drive")
+
+
+
 
     
 
