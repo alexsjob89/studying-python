@@ -74,6 +74,7 @@ else:
     print("Invalid score")
 """
 
+"""
 age = 20
 has_license = False
 
@@ -84,6 +85,35 @@ if age >= 18:
         print("You need a license to drive")
 else:
     print("You are too young to drive")
+"""
+
+"""
+score = 34
+attendance = 65
+submitted = False
+
+if score >= 65:
+    if attendance >= 86:
+        if submitted:
+            print("Pass with good standing")
+    else:
+       print("Pass but misiing assigment")
+else:
+       print("Pass but low attendance")
+"""
+
+temperature = 23
+is_sunny = True
+
+if temperature < 34 and is_sunny:
+    print("It's hot sunny day!!")
+else:
+    print("it's either too hot or not sunny")
+
+
+
+
+
 
 
 
