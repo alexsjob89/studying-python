@@ -178,12 +178,11 @@ match day:
         print("No match")
 """
 
-
-i = 1
-while i < 6:
-    print(i)
-    i += 1
-
+fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry", "Fig", "Grape", "Honeydew"]
+for x in fruits:
+    print(x)
+    if x == "Cherry":
+        break
 
 
 
