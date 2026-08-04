@@ -101,7 +101,7 @@ if score >= 65:
 else:
        print("Pass but low attendance")
 """
-
+"""
 temperature = 23
 is_sunny = True
 
@@ -109,11 +109,80 @@ if temperature < 34 and is_sunny:
     print("It's hot sunny day!!")
 else:
     print("it's either too hot or not sunny")
+"""
+
+"""
+score = 70
+extra_credit = 6
+
+if score >= 90:
+    if extra_credit >= 0:
+        print("You got an A+")
+    else:
+        print("You got an A grade")
+elif score >= 80:
+    print("You got a B grade")
+else:
+    print("You got a C grade")
+"""
+
+"""
+day = 8
+match day:
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")
+    case 4:
+        print("Thursday")
+    case 5:
+        print("Friday")
+    case 6:
+        print("Saturday")
+    case 7:
+        print("Sunday")
+    case _:
+        print("Invalid day")
+"""
+
+"""
+day = 5
+match day:
+    case 2:
+        print("Today is Tuesday evening")
+    case 3:
+        print("Today is Wednesday evening")
+    case _:
+        print("Looking forward to the weekend!!")
+"""
+
+"""
+day = 2
+match day:
+    case 1 | 2 | 3 | 4 | 5:
+        print("Today is weekday!!")
+    case 6 | 7:
+        print("Today is weekends!!")
+"""
+"""
+month = 1
+day = 3
+match day:
+    case 1 | 2 | 3 | 4 | 5 if month == 1:
+        print("A day in January")
+    case 1 | 2 | 3 | 4 | 5 if month == 5:
+        print("A day in May")
+    case _:
+        print("No match")
+"""
 
 
-
-
-
+i = 1
+while i < 6:
+    print(i)
+    i += 1
 
 
 
