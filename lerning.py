@@ -177,12 +177,28 @@ match day:
     case _:
         print("No match")
 """
-
+"""
 fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry", "Fig", "Grape", "Honeydew"]
 for x in fruits:
     print(x)
     if x == "Cherry":
-        break
+        continue
+"""
+
+"""
+for x in range(23):
+    print(x)
+else:
+    print("LFinally finished!!")
+"""
+
+adj = ["red", "big", "tasty", "sweet", "yummy"]
+fruits = ["apple", "banana", "cherry", "date", "elderberry"]
+
+for x in adj:
+    for y in fruits:
+        print(x, y)
+
 
 
 
