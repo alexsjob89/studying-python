@@ -212,14 +212,29 @@ temp3 = 50
 celsius3 = (temp3 - 32) * 5 / 9
 print(celsius3)
 """
+"""
+name = "Dorultan"
+surname = "Alex"
+place = "London"
+born = 1989
 
-def fahrenheit_to_celsius(fahrenheit):
-    return(fahrenheit - 32) * 5 / 9
+personal_details = str(surname) + " " + str(name) + " " + str(place) + " " + str(born)
 
+def my_names(personal_details):
+    print("hello, my name is", personal_details)
 
-print(fahrenheit_to_celsius(77))
-print(fahrenheit_to_celsius(95))
-print(fahrenheit_to_celsius(50))
+my_names(personal_details)
+"""
+
+my_fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"]
+textures = ["Smooth", "Soft", "Juicy"]
+def my_function(fruits):
+    for x in my_fruits:
+        for y in textures:
+            print(y, x)
+        
+
+my_function(my_fruits)
 
 
 
