@@ -225,7 +225,7 @@ def my_names(personal_details):
 
 my_names(personal_details)
 """
-
+"""
 my_fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"]
 textures = ["Smooth", "Soft", "Juicy"]
 def my_function(fruits):
@@ -235,6 +235,15 @@ def my_function(fruits):
         
 
 my_function(my_fruits)
+"""
+
+def my_function():
+    return ["Apple", "Banana", "Cherry", "Date", "Elderberry"]
+
+fruits = my_function()
+
+
+
 
 
 
