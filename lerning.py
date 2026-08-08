@@ -237,16 +237,19 @@ def my_function(fruits):
 my_function(my_fruits)
 """
 
-class MyClass:
-    x = 5 * 10
+class Person:
+ def __init__(self, name, age, city, country):
+    self.name = name
+    self.age = age
+    self.city = city
+    self.country = country
 
-p1 = MyClass()
-p2 = MyClass()
-p3 = MyClass()
+p1 = Person("Alex", 36, "London", "UK")
 
-print(p1.x)
-print(p2.x)
-print(p3.x)
+print(p1.name,
+       p1.age, 
+       p1.city, 
+       p1.country)
 
 
 
