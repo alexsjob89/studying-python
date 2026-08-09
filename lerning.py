@@ -236,20 +236,125 @@ def my_function(fruits):
 
 my_function(my_fruits)
 """
+"""
+name = input("Enter student name: ")
 
-class Person:
- def __init__(self, name, age, city, country):
-    self.name = name
-    self.age = age
-    self.city = city
-    self.country = country
+marks = []
 
-p1 = Person("Alex", 36, "London", "UK")
+for i in range(5):
+    mark = int(input(f"Enter mark {i+1}: "))
+    marks.append(mark)
 
-print(p1.name,
-       p1.age, 
-       p1.city, 
-       p1.country)
+total = sum(marks)
+average = total / len(marks)
+highest = max(marks)
+lowest = min(marks)
+
+if average >= 90:
+    grade = "A"
+elif average >= 80:
+    grade = "B"
+elif average >= 70:
+    grade = "C"
+elif average >= 60:
+    grade = "D"
+else:
+    grade = "F"
+
+if average >= 50:
+    result = "PASS"
+else:
+    result = "FAIL"
+
+print("\n------ REPORT CARD ------")
+print("Student :", name)
+
+print("\nMarks")
+for i, mark in enumerate(marks, start=1):
+    print(f"Subject {i}: {mark}")
+
+print("-------------------------")
+print("Total   :", total)
+print("Average :", round(average, 2))
+print("Highest :", highest)
+print("Lowest  :", lowest)
+print("Grade   :", grade)
+print("Result  :", result)
+"""
+
+products = {
+    "Apple": 1.5,
+    "Banana": 0.8,
+    "Orange": 2.0,
+    "Bread": 3.0,
+    "Milk": 4.5
+}
+
+cart = []
+
+cart.append("Apple")
+cart.append("Milk")
+
+print("\n------ PRODUCTS ------")
+
+for product, price in products.items():
+    print(f"{product.title():10} £{price:.2f}")
+
+
+
+while True:
+
+    print("\n------ SHOPPING CART ------")
+    print("1. View products")
+    print("2. Add products")
+    print("3. View cart")
+    print("4. Remove products")
+    print("5. Checkout")
+    print("6. Exit")
+
+    choice = input("Choose an option: ")
+
+    if choice == "1":
+
+        print("\n-----PRODUCTS-----")
+
+        for product, price in products.items():
+            print(f"{product.title():10} £{price:.2f}")
+
+    elif choice == "2":
+
+        product = input("Enter product name: ").lower()
+
+        if product in products:
+            cart.append(product)
+            print(f"{product.title()} added to cart.") 
+
+        else:
+            print("Product not found.")   
+
+    elif choice == "3":
+
+        if len(cart) == 0:
+            print("Your cart is empty.")
+
+        else:
+            print("\n-----Your-----")
+
+            total = 0
+
+            for index, product in enumerate(cart, start=1):
+                price = products[product]
+                total += price
+
+                print(f"{index}. {product.title():10} £{price:.2f}")
+
+            print("---------------------")
+            print(f"Total: £{total:.2f}")
+
+
+
+
+
 
 
 
