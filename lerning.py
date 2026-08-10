@@ -338,7 +338,7 @@ while True:
             print("Your cart is empty.")
 
         else:
-            print("\n-----Your-----")
+            print("\n-----Your cart-----")
 
             total = 0
 
@@ -350,6 +350,28 @@ while True:
 
             print("---------------------")
             print(f"Total: £{total:.2f}")
+
+            enumerate(cart, start=1)
+
+    elif choice == "4":
+        if len(cart) == 0:
+            print("Your cart is empty.")
+
+        else:
+             print("\n-----YOUR CART-----")
+
+             for index, product in enumerate(cart, start=1):
+                 print(f"{index}. {product.title()}")
+
+            number = int(input("Enter item number to remove: "))
+
+            if 1 <= number <= len(cart):
+
+               removed = cart.pop(number - 1)
+               print(f"{removed.item()} removed from cart.")
+
+    else:
+        print("Invalid item number")
 
 
 
