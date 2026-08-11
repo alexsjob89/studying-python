@@ -281,7 +281,7 @@ print("Lowest  :", lowest)
 print("Grade   :", grade)
 print("Result  :", result)
 """
-
+"""
 products = {
     "Apple": 1.5,
     "Banana": 0.8,
@@ -358,20 +358,72 @@ while True:
             print("Your cart is empty.")
 
         else:
-             print("\n-----YOUR CART-----")
+            print("\n-----YOUR CART-----")
 
-             for index, product in enumerate(cart, start=1):
-                 print(f"{index}. {product.title()}")
+            for index, product in enumerate(cart, start=1):
+                print(f"{index}. {product.title()}")
 
             number = int(input("Enter item number to remove: "))
 
-            if 1 <= number <= len(cart):
+            if 1 <= number <= len(cart):    
+                removed = cart.pop(number - 1)
+                print(f"{removed.title()} removed from cart.")
 
-               removed = cart.pop(number - 1)
-               print(f"{removed.item()} removed from cart.")
+    elif choice == "5":
+        if len(cart) == 0:
+            print("Your cart is empty.")
+        else:
 
-    else:
-        print("Invalid item number")
+            prices = []
+
+            for product in cart:
+                prices.append(products[product])
+
+            total = sum(prices)
+
+            print("\n-----CHECKOUT-----")
+
+            for product in cart:
+                print(f"{product.title():10} £{products[product]:.2f}")
+
+            print("-------------------")
+            print(f"Total: {product.total:.2f}")
+
+            print("Thank you for shopping!")
+
+            cart.clear()
+"""
+
+                   #CALCULATOR PROJECT
+#GET THE NUMBERS
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+#GET THE OPERATOR
+
+operator = input("Enter operator (+, -, *, /): ")
+
+#PERFORM THE CALCULATOR
+
+if operator == "+":
+    result = num1 + num2
+
+elif operator == "-":
+    result = num1 - num2
+
+elif operator == "*":
+    result = num1 * num2
+
+elif operator == "/":
+    result = num1 / num2
+
+else:
+    print("Invalid operator")
+
+    print("Result", result)
+
+
 
 
 
