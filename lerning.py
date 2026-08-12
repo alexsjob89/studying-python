@@ -393,7 +393,7 @@ while True:
 
             cart.clear()
 """
-
+"""
                    #CALCULATOR PROJECT
 #GET THE NUMBERS
 
@@ -422,8 +422,47 @@ else:
     print("Invalid operator")
 
     print("Result", result)
+"""
+
+#random module
+
+import random
+
+secret_number = random.randint(1, 100)
 
 
+#ask the player for a guess
+
+guess = int(input("Guess the number: "))
+
+#compare the guess
+
+
+
+if guess < secret_number:
+    print("Too low!")
+
+elif guess > secret_number:
+    print("Too high!")
+
+else:
+    print("Correct")
+
+#keep asking until correct
+
+    while True:
+
+        guess = int(input("Guess the number: "))
+
+        if guess < secret_number:
+            print("Too low!")
+
+        elif guess > secret_number:
+            print("Too high!")
+
+        else:
+            print("Correct!")
+            break
 
 
 
