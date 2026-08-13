@@ -424,20 +424,14 @@ else:
     print("Result", result)
 """
 
-#random module
+
+#number guessing game
 
 import random
 
 secret_number = random.randint(1, 100)
 
-
-#ask the player for a guess
-
 guess = int(input("Guess the number: "))
-
-#compare the guess
-
-
 
 if guess < secret_number:
     print("Too low!")
@@ -448,21 +442,31 @@ elif guess > secret_number:
 else:
     print("Correct")
 
-#keep asking until correct
 
-    while True:
+while True:
 
-        guess = int(input("Guess the number: "))
+    guess = int(input("Guess a number between 1 and 100: "))
 
-        if guess < secret_number:
-            print("Too low!")
+    attempts += 1
 
-        elif guess > secret_number:
-            print("Too high!")
+    if guess < secret_number:
+      print("Too low!")
 
-        else:
-            print("Correct!")
-            break
+    elif guess > secret_number:
+      print("Too high!")
+
+    else:
+      print("Bravo!!")
+      print(f"You guess it in {attempts} attempts.")
+      break
+
+ 
+
+
+
+
+
+
 
 
 
