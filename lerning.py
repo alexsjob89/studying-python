@@ -424,7 +424,7 @@ else:
     print("Result", result)
 """
 
-
+"""
 #number guessing game
 
 import random
@@ -459,8 +459,41 @@ while True:
       print("Bravo!!")
       print(f"You guess it in {attempts} attempts.")
       break
+"""
 
- 
+
+#rock Paper Scissors Game
+
+import random
+
+#Create the choices
+
+choices = ["Rock", "Paper", "Scissors"]
+
+#The computer can randomly choose one:
+
+computer = random.choice(choices)
+
+#Get the player's chice
+
+player = input("Choose rock, paper or scissors: ").lower()
+
+
+if player == computer:
+    print("Draw!")
+
+elif (
+    player == "rock" and computer == "scissors"
+) or (
+    player == "paper" and computer == "rock"
+) or (
+    player == "scissor" and computer == "paper"
+):
+    print("You win!!")
+
+else:
+    print("Computer wins!")
+
 
 
 
