@@ -474,7 +474,7 @@ choices = ["Rock", "Paper", "Scissors"]
 
 computer = random.choice(choices)
 
-#Get the player's chice
+#Get the player's choice
 
 player = input("Choose rock, paper or scissors: ").lower()
 
