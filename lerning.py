@@ -1,5 +1,4 @@
 """
-// Comment
 number = 7
 
 if number % 4 == 1:
