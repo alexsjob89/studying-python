@@ -462,42 +462,38 @@ while True:
 """
 
 
-#rock Paper Scissors Game
+
 
 import random
 
-#Create the choices
+choices = ["rock", "paper", "scissors"]
 
-choices = ["Rock", "Paper", "Scissors"]
+print("-----ROCK PAPER SCISSORS-----")
 
-#The computer can randomly choose one:
+player = input("Chose rock, paper or dcissors: ").lower()
 
 computer = random.choice(choices)
 
-#Get the player's choice
-
-player = input("Choose rock, paper or scissors: ").lower()
-
+print("You chose:", player)
+print("Computer scose:", computer)
 
 if player == computer:
+    
     print("Draw!")
 
 elif (
-    player == "rock" and computer == "scissors"
+    player == "rock" and computer == "scissor"
 ) or (
     player == "paper" and computer == "rock"
 ) or (
-    player == "scissor" and computer == "paper"
+    player == "scissors" and computer == "paper"
 ):
     print("You win!!")
-
+    
 else:
-    print("Computer wins!")
-
-
-
-
-
+    
+    print("Computer win!!")
+    
 
 
 
