@@ -463,37 +463,57 @@ while True:
 
 
 
-
 import random
 
 choices = ["rock", "paper", "scissors"]
 
-print("-----ROCK PAPER SCISSORS-----")
+player_score = 0
+computer_score = 0
 
-player = input("Chose rock, paper or dcissors: ").lower()
+while True:
+    print("\n==== ROCK PAPER SCISSORS ===")
+    print("Player:", player_score)
+    print("Computer:", computer_score)
 
-computer = random.choice(choices)
+    player = input("\nChoose rock, paper or scissors (or 'quit' to exit): ").lower()
 
-print("You chose:", player)
-print("Computer scose:", computer)
+    if player == "quit":
+        break
 
-if player == computer:
-    
-    print("Draw!")
+    if player not in choices:
+        print("invalid choice!")
+        continue
 
-elif (
-    player == "rock" and computer == "scissor"
-) or (
-    player == "paper" and computer == "rock"
-) or (
-    player == "scissors" and computer == "paper"
-):
-    print("You win!!")
-    
-else:
-    
-    print("Computer win!!")
-    
+    computer = random.choice(choices)
+
+    print("You chose:", player)
+    print("Computer chose:", computer)
+
+    if player == computer:
+        print("draw!")
+
+    elif (
+        player == "rock" and computer == "scissors"
+    ) or (
+        player == "paper" and computer == "rock"
+    ) or (
+        player == "scissors" and computer == "paper"
+    ):
+        print("You win!!")
+        player_score += 1
+
+    else:
+        print("computer win!!")
+        computer_score += 1
+
+print("\n==== FINAL SCORE ===")
+print("Player:", player_score)
+print("Computer:", computer_score)
+
+
+
+
+
 
 
 
