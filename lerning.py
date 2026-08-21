@@ -542,25 +542,94 @@ except ValueError:
     print("Please enter a valid number.")
 """
 
+"""
+#simple to-do list
 
+tasks = []
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def show_tasks():
+    if not tasks:
+        print("\nNo tasks yet.")
+        return
     
+    print("\nYour Tasks: ")
+    for index, task in enumerate(tasks, start=1):
+        status = "/" if task["completed"] else " "
+        print(f"{index}. [{status}] {task["name"]}")
+        
+def add_task():
+    name = input("Enter a task: ")
+    
+    tasks.append({
+        "name": name,
+        "completed": False
+    })
 
+    print("Task added!")
+    
+def complete_task():
+    show_tasks()
+    
+    if not tasks:
+        return
+    
+    number = int(input("Enter the number to complete: "))
+
+    if 1 <= number <= len(tasks):
+        tasks[number - 1]["completed"] = True
+        print("Task completed!")
+    else:
+        print("Invalid task number.")
+
+def delete_task():
+    show_tasks()
+    
+    if not tasks:
+        return
+    
+    number = int(input("Enter task number to delete: "))
+    
+    if 1 <= number <= len(tasks):
+        deleted = tasks.pop(number - 1)
+        print(f"Deleted: {deleted}")
+    else:
+        print("Invalid task number.")
+        
+while True:
+    print("\n---- TO-DO LIST ----")
+    print("1. Add task")
+    print("2. View task")
+    print("3. Complete task")
+    print("4. Delete task")
+    print("5. Exit")
+    
+    choice = input("Choose an option: ")
+    
+    if choice == "1":
+        add_task()
+    
+    elif choice == "2":
+        show_tasks()
+    
+    elif choice == "3":
+        complete_task()
+    
+    elif choice == "4":
+        delete_task()
+    
+    elif choice =="5":
+        print("Goodbye!")
+        break
+    
+    else:
+        print("Invalid option.")
+"""
+
+
+import string
+import secrets
+
+print("==== Password Generator ")
 
 
 
