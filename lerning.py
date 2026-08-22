@@ -631,6 +631,27 @@ import secrets
 
 print("==== Password Generator ")
 
+while True:
+    try:
+        length = int(input("Enter password length: "))
+        
+        if 8 <= length <= 64:
+            break
+        
+        print("Please enter a length between 8 nad 64.")
+        
+    except ValueError:
+        print("Please enter a number.")
+        
+characters = (
+    string.ascii_letters +
+    string.digits +
+    string.punctuation
+)
 
+password = ''.join(
+    secrets.choice(characters)
+    for _ in range(length)
+)
 
-
+print("\nGenerated password::", passwod)
