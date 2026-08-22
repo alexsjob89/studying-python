@@ -629,6 +629,7 @@ while True:
 import string
 import secrets
 
+#password length
 print("==== Password Generator ")
 
 while True:
@@ -638,20 +639,80 @@ while True:
         if 8 <= length <= 64:
             break
         
-        print("Please enter a length between 8 nad 64.")
+        print("Please enter a length between 8 and 64.")
         
     except ValueError:
         print("Please enter a number.")
         
-characters = (
-    string.ascii_letters +
-    string.digits +
-    string.punctuation
-)
+# Buid character options
+uppercase = input("Include uppercase letters? (y/n): ").lower == "y"
+lowercase = input("Include lowercase letter? (y/n): ").lower == "y"
+numbers = input("Include numbers? (y/n): ").lower == "y"
+symbols = input("Include symbols? (y/n): ")
 
-password = ''.join(
-    secrets.choice(characters)
-    for _ in range(length)
-)
+# build character set
+characters = ""
 
-print("\nGenerated password::", passwod)
+if uppercase:
+    characters += string.ascii_uppercase
+
+if lowercase:
+    characters += string.ascii_lowercase
+    
+if numbers:
+    characters += string.digits
+    
+if symbols:
+    characters += string.punctuation
+    
+# generate password
+if not characters:
+    print("You mujst select at least one character type.")
+
+else:
+    password = ''.join(
+        secrets.choice(characters)
+        for _ in range(length)
+    )
+
+print("\nGenerated password:", password)
+
+
+
+# password strength checker
+
+
+score = 0
+
+# length
+if len(password) >=12:
+    score += 2
+elif len(password) >= 8:
+    score += 1
+    
+# character type
+if any(c.isupper() for c in password):
+    score += 1
+
+if any(c.islower() for c in password):
+    score += 1
+
+if any(c.isdigit() for c in password):
+    score += 1
+    
+if any(c in string.punctuation for c in password):
+    score += 1
+    
+    
+# strength
+if score <= 2:
+    strength = "Weak"
+elif score <= 4:
+    strength = "Medium"
+else:
+    stremgth = "Strong"
+    
+print("Password strength:", strength)
+
+
+
