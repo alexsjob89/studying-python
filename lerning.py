@@ -196,5 +196,29 @@ def play_game():
     print("  |    QUIZ FINISHED    |")
     PRINT("  |=====================|")
     
-    print(F"Score: {}")                          
-    print(F"")                          
+    print(F"Score: {score}/{total}")                          
+    print(F"Pecentage: {percentage:.0f}%")
+    
+    if percentage == 100:
+        print("🏆 Perfect score!")
+    elif percentage >= 70:
+        print("🎉 Great job!")
+    elif percentage >= 50:
+        print("👍 Good effort!")
+    else:
+        print("📚 Keep practicing!")
+        
+def main():
+    
+    while True:
+        
+        play_game()
+        
+        print("\nWould you like to play again?")
+        choice = input("yes/no: ".lower())
+        
+        if choice != "yes":
+            print("\nThanks for playing!")
+            break
+        
+main()                      
