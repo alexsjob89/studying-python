@@ -71,4 +71,49 @@ while True:
     print("| 4. Delete Contact |")
     print("| 5. Exit           |")
     print("---------------------")
+   
+    choice = input("Choose an option: ") 
     
+    if choice == "1":
+        name = input("Name: ")
+        phone = input("Phone: ")
+        email = input("Email: ")
+        
+        contacts.append({
+            "name": name,
+            "phone": phone,
+            "email": email
+        })
+    
+        print("Contact added!")
+    
+    elif choice == "2":
+        for contact in contacts:
+            print(
+                contact["name"],
+                contact["phone"],
+                contact["email"]
+            )
+            
+    elif choice == "3":
+        name = input("Search name: ")
+        
+        for contact in contacts:
+            if contact["name"].lower() == name.lower():
+                     print(contact)
+                     
+    elif choice == "4":
+        name = input("Name to delete: ")
+        
+        for contact in contacts:
+            if contact["name"].lower() == name.lower():
+                contacts.remove(contact)
+                print("Contact deleted!")
+                break
+            
+    elif choice == "5":
+        print("Goodbye!!")
+        break
+    
+    else:
+        print("Invalid option")
