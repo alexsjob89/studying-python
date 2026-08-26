@@ -127,7 +127,7 @@ class BankAccount:
         self.account_number = account_number
         self.pin = pin
         self.balance = 0
-        self.transitions = []
+        self.transactions = []
         
     def deposit(self, amount):
         if amount <= 0:
@@ -136,10 +136,58 @@ class BankAccount:
         
         self.balance += amount
         
-        self.transition.append(
+        self.transactions.append(
             f"Deposited: £{amount:.2f}"
         )
         
         print(f"{amount:.2f} deposited successfully.")
         
+    def withdraw(self, amount):
+        if amount <= 0:
+            print("Mount must be greater than £0")
+            return
+        
+        self.balace -= amount
+        self.transactions.append(
+        f"Withdraw: £{amount:,2f}"
+       )
+        
+        print(f"£{amount:.2f} withdraw successfully.")
+        
+    def transfer(self, amount, other_account):
+        if amount <= 0:
+            print("Amount must be greater than £0.")
+            return
+        
+        if amount > self.balance:
+            print("Insufficent funds.")
+            return
+        
+        self.balance -= amount
+        other_account.balance += amount
+        
+        self.transactions.append(
+            f'Transferred £{amount:.2} to {other_account.account_number}'
+        )
+        
+        other_account.thansactions.append(
+            f"Received £{amount:.2f} from {self.account_number}"
+        )
+        
+        print(f"£{amount:.2f} transferred seccessfully.")
+        
+    def check_balance(self):
+        print(f"Current balace: £{self.balance:.2f}")
+    
+    def show_transactions(self):
+        print(f"\n===== TRANSACTION HIOSTORY======")
+        
+        if not self.transactions:
+            print("No transactions yet.")
+            return
+        
+        for transaction in self.transactions:
+            print(transaction)
+            
+class Bank:
     
