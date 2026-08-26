@@ -52,7 +52,7 @@ print(f"you scored {percentage:.0f}%")
     """
     
 # contact book begginer project
-
+"""
 contact = {
     "name": "Alex",
     "phone": "07412984283",
@@ -117,3 +117,29 @@ while True:
     
     else:
         print("Invalid option")
+"""
+
+
+
+class BankAccount:
+    def __init__(self, name, account_number, pin):
+        self.name = name
+        self.account_number = account_number
+        self.pin = pin
+        self.balance = 0
+        self.transitions = []
+        
+    def deposit(self, amount):
+        if amount <= 0:
+            print("Amount must be greater than £0.")
+            return 
+        
+        self.balance += amount
+        
+        self.transition.append(
+            f"Deposited: £{amount:.2f}"
+        )
+        
+        print(f"{amount:.2f} deposited successfully.")
+        
+    
