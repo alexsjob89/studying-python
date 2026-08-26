@@ -120,7 +120,7 @@ while True:
 """
 
 
-
+"""
 class BankAccount:
     def __init__(self, name, account_number, pin):
         self.name = name
@@ -190,4 +190,14 @@ class BankAccount:
             print(transaction)
             
 class Bank:
-    
+     """
+     
+name = input("What is name? ")
+age = input("How old are you? ")
+school_name = input("What school you going? ")
+country_born = input("Which country have you born? ")
+
+print("Hello", name)
+print("You are", age, "years old")
+print("You've born in", country_born)
+print("School name", school_name)
