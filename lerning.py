@@ -18,13 +18,11 @@ for name in names:
 
 
 shopping_list = ["Milk", "Bread", "Meat", "Eggs"]
-
 print(shopping_list)
 
 item = input("Enter item: ").lower()
 
 shopping_list.append(item)
-
 print("Item added: ")
 
     
@@ -34,7 +32,6 @@ for index,item in enumerate(shopping_list, start=1):
 
 
 while True:
-    
     print("\n====== SHOPPING LIST =====")
     print("1. View shopping list")
     print("2. Add item")
@@ -46,6 +43,21 @@ while True:
     
     if choice == "1":
         print("View list")
+        
+    elif choice == "2":
+        print("Add item")
+        
+    elif choice == "3":
+        print("Remove item")
+        
+    elif choice == "4":
+        print("Clear list")
+        
+    elif choice == "5":
+        print("Goodbye!")
+        
+    else:
+        print("Invalid option")
         
     
     
