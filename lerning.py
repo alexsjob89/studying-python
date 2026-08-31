@@ -153,19 +153,59 @@ while True:
             """
             
     
-    
-person = {
-    "name": "Alex",
-    "age": 36,
-    "city": "London",
-}
+"""
+contacts = [
+    {
+        "name": "Alex",
+        "age": 36,
+        "address": "East ham"
+    },
+    {
+        "name": "Ianos",
+        "age": 30,
+        "address": "Stratford"
+    },
+    {
+        "name": "Elisa",
+        "age": 28,
+        "address": "Beckton"
+    }
+]
+search = input("Enter name: ")
+search_age = input("Enter age: ")
 
 
-for key in person.keys():
-    print(key)    
+for contact in contacts:
+   
+   if contact["name"].lower() == search.lower():
+       print("Contact found!")
+       print(contact["age"], contact["address"])
+"""
+
+
+students = [
+    {
+        "name": "Alex",
+        "age": 36,
+        "course": "Python"
+    },
+    {
+        "name": "John",
+        "age": 23,
+        "course": "JavaScript"
+    },
+    {
+        "name": "Richard",
+        "age": 14,
+        "course": "react"
+    }
+]
     
-    
-    
+for student in students:
+    print("Name: ", student["name"])    
+    print("Age: ", student["age"])    
+    print("Course: ", student["course"])  
+    print()  
     
     
     
