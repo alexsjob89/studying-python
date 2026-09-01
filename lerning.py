@@ -182,7 +182,7 @@ for contact in contacts:
        print(contact["age"], contact["address"])
 """
 
-
+"""
 students = [
     {
         "name": "Alex",
@@ -200,12 +200,38 @@ students = [
         "course": "react"
     }
 ]
+"""
+
+"""
+def add_note():
+    note = input("Write a not: ")
     
-for student in students:
-    print("Name: ", student["name"])    
-    print("Age: ", student["age"])    
-    print("Course: ", student["course"])  
-    print()  
+    with open("notes.txt", "a") as file:
+        file.write(note + "\n")
+        
+    print("")
+ """
+ 
+shopping_list = []
+
+shopping_list.append("Milk")
+shopping_list.append("Bread")
+shopping_list.append("Eggs")
+shopping_list.append("Meat")
+shopping_list.append("Vegetables")
+ 
+ 
+import json
+
+with open("shopping.json", "r") as file:
+    json.dump(shopping_list, file, index=6)
+with open("shopping.json", "r") as file:
+    shopping_list = json.load(file)   
+    
+    print(shopping_list)
+
+
+
     
     
     
