@@ -211,7 +211,7 @@ def add_note():
         
     print("")
  """
- 
+"""
 shopping_list = []
 
 shopping_list.append("Milk")
@@ -223,14 +223,21 @@ shopping_list.append("Vegetables")
  
 import json
 
-with open("shopping.json", "r") as file:
-    json.dump(shopping_list, file, index=6)
+with open("shopping.json", "w") as file:
+    json.dump(shopping_list, file, indent=6)
 with open("shopping.json", "r") as file:
     shopping_list = json.load(file)   
     
-    print(shopping_list)
+print(shopping_list)
+"""
 
 
+file = open("test.txt", "a")
+ 
+file.write("\nNew line")
+
+file.close()
+ 
 
     
     
