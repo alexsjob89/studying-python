@@ -231,15 +231,22 @@ with open("shopping.json", "r") as file:
 print(shopping_list)
 """
 
-
-file = open("test.txt", "a")
- 
-file.write("\nNew line")
-
-file.close()
- 
-
+with open("test.json", "w") as file:
+    file.write("Alex\n")
+    file.write("Elisa\n")
+    file.write("Ianos\n")
+    file.write("Richard\n")
     
+with open("test.json", "r") as file:
+    lines = file.readlines()
+
+print(lines)
+
+
+with open("test.json", "r") as file:
+    
+    for line in file:
+        print(line.strip())
     
     
     
