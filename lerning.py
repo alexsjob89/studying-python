@@ -182,100 +182,32 @@ for contact in contacts:
        print(contact["age"], contact["address"])
 """
 
-"""
-students = [
-    {
-        "name": "Alex",
-        "age": 36,
-        "course": "Python"
-    },
-    {
-        "name": "John",
-        "age": 23,
-        "course": "JavaScript"
-    },
-    {
-        "name": "Richard",
-        "age": 14,
-        "course": "react"
-    }
-]
-"""
-
-"""
-def add_note():
-    note = input("Write a not: ")
-    
-    with open("notes.txt", "a") as file:
-        file.write(note + "\n")
-        
-    print("")
- """
-
-
-
-"""
-with open("test.json", "w") as file:
-    file.write("Alex\n")
-    file.write("Elisa\n")
-    file.write("Ianos")
-    file.write("Richard\n")
-
-
-with open("test.json", "r") as file:
-    
-    for line in file:
-        print(line.strip())
-        
-try:
-    with open("test.json", "r") as file:
-        content = file.read()
-        
-except FileNotFoundError:
-    print("The file does not exist.")
-"""
-
-
-import json
-
-"""
-contact = {
-    "name": "Alex",
-    "age": 36,
-    "phone": "123456789",
-    "email": "aslkfjasflkj@domain.com"
-}
-
-
-with open("contact.json", "w") as file:
-    json.dump(contact, file, indent=4)
-"""
-
-    
-    
-    
-shopping_list = []
-
-shopping_list.append("Milk")
-shopping_list.append("Bread")
-shopping_list.append("Eggs")
-shopping_list.append("Meat")
-shopping_list.append("Vegetables")
  
- 
-import json
 
-with open("shopping.json", "w") as file:
-    json.dump(shopping_list, file, indent=4)
-    
-with open("shopping.json", "r") as file:
-    shopping_list = json.load(file)   
-    
-print(shopping_list)
-    
-    
-    
-    
+
+
+
+class Person:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.place = "London"
+
+    def introduce(self):
+        print(f"Hello, my name is {self.name}.")
+        
+    def show_place_born(self):
+        print(f"I was born in {self.place}.")
+        
+    def show_age(self):
+        print(f"I am {self.age} years old.")
+        
+person1 = Person("Alex", 36)
+
+person1.introduce()
+person1.show_place_born()
+person1.show_age()
     
     
     
