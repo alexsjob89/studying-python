@@ -181,38 +181,30 @@ for contact in contacts:
        print("Contact found!")
        print(contact["age"], contact["address"])
 """
+                                              
+class Player:
+    
 
- 
-
-
-
-
-class Person:
-
-    def __init__(self, name, age):
+    def __init__(self, name, health):
         self.name = name
-        self.age = age
-        self.place = "London"
+        self.health = health
+        
+    def Attack(self):
+        print(self.name, "attacks!")
+        
+    def take_damage(self, damage):
+        self.health -= damage
+        
+    def attack(self, enemy):
+        print(self.name, "atteacks", enemy)
+        
+player = Player("Alex", 100)
 
-    def introduce(self):
-        print(f"Hello, my name is {self.name}.")
-        
-    def show_place_born(self):
-        print(f"I was born in {self.place}.")
-        
-    def show_age(self):
-        print(f"I am {self.age} years old.")
-        
-person1 = Person("Alex", 36)
+player.attack("Goblin")
 
-person1.introduce()
-person1.show_place_born()
-person1.show_age()
-    
-    
-    
-    
-    
+        
+
+
     
     
     
