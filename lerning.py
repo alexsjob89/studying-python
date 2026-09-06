@@ -215,35 +215,49 @@ print(account3.balance)
 print(account4.balance)
 """
 
-class BankAccount:
+class Contact:
     
-    def __init__(self, balance):
-        self.__balance = balance
+    def __init__(self, name, phone, email):
+        self.name = name
+        self.phone = phone
+        self.email = email
         
-    def deposit(self, amount):
-        if amount > 0:
-            self.__balance += amount
+    def display(self):
+        print(f"Name: {self.name}")
+        print(f"Phone: {self.phone}")
+        print(f"Email: {self.email}")
+
+class ContactManager:
+    
+    def __init__(self):
+        self.contacts = []
+        
+    def add_contact(self, contact):
+        self.contacts.append(contact)
+        
+    def show_contact(self):
+        for contact in self.contacts:
+            contact.display()
             
-    def withdraw(self, amount):
-        if amount > 0 and amount <= self.__balance:
-            self.__balance -= amount
-            print("Withdrawn: £", amount)
-        else:
-            print("Insufficient funds or invalid amount.")
-            
-    def get_balance(self):
-        return self.__balance
+manager = ContactManager()
+
+contact1 = Contact(
+    "Alex",
+    "07345435345",
+    "alex@jdsadh.com"
+)
+
+contact2 = Contact(
+    "Elisa",
+    "0734532345",
+    "elisa@jdsadh.com"
+)
+
+manager.add_contact(contact1)
+manager.add_contact(contact2)
     
-account = BankAccount(1000)
+manager.show_contact()
 
-account.deposit(500)
-
-account.withdraw(200)
-
-
-
-    
-    
 
 
 
