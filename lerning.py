@@ -181,26 +181,73 @@ for contact in contacts:
        print("Contact found!")
        print(contact["age"], contact["address"])
 """
-                                              
-class Player:
+"""                              
+class BankAccount:
+    
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+        
+    def deposit(self, amount):
+        self.balance += amount
+        
+    def withdraw(self, amount):
+        self.balance -= amount
+        
+    def show_balance(self):
+        print("Owner:", self.owner)
+        print("Balance:£", self.balance)
+        
+account = BankAccount("Alex", 1000)
+account2 = BankAccount("Elisa", 300)
+account3 = BankAccount("Kevin", 30)
+account4 = BankAccount("Alin", 234)
+
+account.deposit(500)
+
+account.withdraw(200)
+
+account.show_balance()
+
+print(account.balance)
+print(account2.balance)
+print(account3.balance)
+print(account4.balance)
+"""
+
+class BankAccount:
+    
+    def __init__(self, balance):
+        self.__balance = balance
+        
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            
+    def withdraw(self, amount):
+        if amount > 0 and amount <= self.__balance:
+            self.__balance -= amount
+            print("Withdrawn: £", amount)
+        else:
+            print("Insufficient funds or invalid amount.")
+            
+    def get_balance(self):
+        return self.__balance
+    
+account = BankAccount(1000)
+
+account.deposit(500)
+
+account.withdraw(200)
+
+
+
+    
     
 
-    def __init__(self, name, health):
-        self.name = name
-        self.health = health
-        
-    def Attack(self):
-        print(self.name, "attacks!")
-        
-    def take_damage(self, damage):
-        self.health -= damage
-        
-    def attack(self, enemy):
-        print(self.name, "atteacks", enemy)
-        
-player = Player("Alex", 100)
 
-player.attack("Goblin")
+
+    
 
         
 
