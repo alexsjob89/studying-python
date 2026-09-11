@@ -214,7 +214,7 @@ print(account2.balance)
 print(account3.balance)
 print(account4.balance)
 """
-
+"""
 class Contact:
     
     def __init__(self, name, phone, email):
@@ -257,6 +257,57 @@ manager.add_contact(contact1)
 manager.add_contact(contact2)
     
 manager.show_contact()
+"""
+
+"""
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+favorite_food = input("What is your fav food?")
+favorite_number = int(input("What is your fav number?"))
+
+total_age = age + 10
+
+print("Name:", name)
+print("You are", age, "years old in", "10 years you'll be", total_age)
+print("favorite food", favorite_food)
+print("favorite number", favorite_number)
+print("registration complete!!")
+"""
+"""
+users1 = {"Alex", "Elisa", "Kevin", "Ecveline"}
+users2 = {"Jhon", "Draid", "Kevin", "Clark"}
+
+all_users = users1 - users2
+
+for user in all_users:
+    print(user)
+"""
+
+
+
+person = {
+    "name": "Alex",
+    "age": 36,
+    "job": "construction"
+}
+
+person["new_job"] = "developer"
+
+if "email" in person:
+    print("email exist")
+    
+elif "email" not in person:
+    person["email"] = "alex@fdfsd.com"
+
+print(person, "email added!")
+    
+    
+
+
+    
+
+
+
 
 
 
