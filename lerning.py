@@ -284,26 +284,20 @@ for user in all_users:
 """
 
 
+choice = input("choose 1, 2, 3, 4: ")
 
-person = {
-    "name": "Alex",
-    "age": 36,
-    "job": "construction"
-}
-
-person["new_job"] = "developer"
-
-if "email" in person:
-    print("email exist")
-    
-elif "email" not in person:
-    person["email"] = "alex@fdfsd.com"
-
-print(person, "email added!")
-    
-    
+match choice:
+    case "1":
+        print("You selected add")
+    case "2":
+        print("You selected view")
+    case "3":
+        print("You selected delete")
+    case "4":
+        print("Invalid choice")
 
 
+        
     
 
 
