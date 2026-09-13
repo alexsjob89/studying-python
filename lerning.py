@@ -284,17 +284,26 @@ for user in all_users:
 """
 
 
-choice = input("choose 1, 2, 3, 4: ")
+day = input("\nMonday \nTuesday \nWendsday \nThurday \nFriday \nSutarday \nSunday \nChoose a day: ")
 
-match choice:
-    case "1":
-        print("You selected add")
-    case "2":
-        print("You selected view")
-    case "3":
-        print("You selected delete")
-    case "4":
-        print("Invalid choice")
+match day:
+    case "Monday":
+       print("Gym time")
+    case "Tuesday":
+        print("Work")
+    case "Wendsday":
+        print("Video games")
+    case "Thurday":
+        print("Work programing")
+    case "Friday":
+        print("Shopping")
+    case "Sutarday":
+        print("Going in park with my kids")
+    case "Sunday":
+        print("Relaxing")
+        
+
+
 
 
         
