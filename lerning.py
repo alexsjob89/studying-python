@@ -283,26 +283,20 @@ for user in all_users:
     print(user)
 """
 
+secrete_number = "7"
 
-day = input("\nMonday \nTuesday \nWendsday \nThurday \nFriday \nSutarday \nSunday \nChoose a day: ")
-
-match day:
-    case "Monday":
-       print("Gym time")
-    case "Tuesday":
-        print("Work")
-    case "Wendsday":
-        print("Video games")
-    case "Thurday":
-        print("Work programing")
-    case "Friday":
-        print("Shopping")
-    case "Sutarday":
-        print("Going in park with my kids")
-    case "Sunday":
-        print("Relaxing")
+while True:
+    guess = input("Guess a number 1 to 10, or type 'quit': ")
+    
+    if guess == "quit":
+        print("Game ended.")
+        break
+    
+    elif guess == "7":
+        print("Correct! You huess the secrete number:", secrete_number)
         
-
+    else:
+        print("Wrong guess. Try again!")
 
 
 
