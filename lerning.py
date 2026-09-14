@@ -283,21 +283,34 @@ for user in all_users:
     print(user)
 """
 
-secrete_number = "7"
+shopping_list = []
 
 while True:
-    guess = input("Guess a number 1 to 10, or type 'quit': ")
+    print("\n1. Add an item")
+    print("2. Show items")
+    print("3. exit")
+
+    choice = input("\nChoose an option: ")
     
-    if guess == "quit":
-        print("Game ended.")
+    if choice == "1":
+        item = input("Enter an item: ")
+        shopping_list.append(item)
+        print(item,"added!")
+        
+    elif choice == "2":
+        if len(shopping_list) == 0:
+            print("Your shopping list is empty.")
+        else:
+            print("Your shopping list:", shopping_list)
+            
+    elif choice == "3":
+        print("goodbye!")
         break
     
-    elif guess == "7":
-        print("Correct! You huess the secrete number:", secrete_number)
-        
     else:
-        print("Wrong guess. Try again!")
-
+        print("Invalid choice.Please enter 1, 2, 3.")
+    
+    
 
 
         
