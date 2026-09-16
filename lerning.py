@@ -282,7 +282,7 @@ all_users = users1 - users2
 for user in all_users:
     print(user)
 """
-
+"""
 shopping_list = []
 
 while True:
@@ -309,15 +309,32 @@ while True:
     
     else:
         print("Invalid choice.Please enter 1, 2, 3.")
-    
-    
+"""
 
+"""
+def check_stock(quantity):
+    if quantity == 0:
+        return "Out of stock"
+    elif quantity <= 3:
+        return "Low stock"
+    else:
+        return "Available"
+    
+print(check_stock(3)) 
+print(check_stock(12)) 
+print(check_stock(34)) 
+"""
 
+def count_items(boxes):
+    total = 0
+    
+    for quantity in boxes:
+        total += quantity
         
-    
+    return total
 
-
-
+result = count_items([4, 34, 12])
+print("Total items:", result)
 
 
 
