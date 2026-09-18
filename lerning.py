@@ -324,21 +324,21 @@ print(check_stock(3))
 print(check_stock(12)) 
 print(check_stock(34)) 
 """
-
-def count_items(boxes):
-    total = 0
-    
-    for quantity in boxes:
-        total += quantity
+"""
+def my_decorator(func):
+    def wrapper():
+        print("before the function runs.")
+        func()
+        print("After the function runs.")
         
-    return total
+    return wrapper
 
-result = count_items([4, 34, 12])
-print("Total items:", result)
-
-
-
-
+@my_decorator
+def say_hello():
+    print("Hello, Alex!")
+    
+say_hello()
+"""
     
 
         
