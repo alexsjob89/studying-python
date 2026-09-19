@@ -339,13 +339,18 @@ def say_hello():
     
 say_hello()
 """
-    
 
+def ask_number():
+    while True:
+        try:
+            number = int(input("Enter a whole number: "))
+        except ValueError:
+            print("Invalid input. Try again.")
+        else:
+            return number
         
-
-
-    
-    
+number = ask_number()
+print("Double your number:", number * 2)   
     
     
     
