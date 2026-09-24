@@ -339,20 +339,14 @@ def say_hello():
     
 say_hello()
 """
-
-def ask_number():
-    while True:
-        try:
-            number = int(input("Enter a whole number: "))
-        except ValueError:
-            print("Invalid input. Try again.")
-        else:
-            return number
-        
-number = ask_number()
-print("Double your number:", number * 2)   
-    
-    
+"""
+name = input("Enter you name:")
+print(f"Hello{name}")
+fav1 = input("What is your favorite animal:")
+fav2 = input("What is your favorite color:")
+fav3 = input("What is your favorite number:")
+print(f"Do you want a {fav2} {fav1} with {fav3} legs?")
+    """
     
     
     
