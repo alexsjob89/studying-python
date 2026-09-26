@@ -4,21 +4,36 @@ body {
 
 .checkerBox {
     display: grid;
-    background-color: rgb(101, 115, 126);
-    width: 200px;
-    height: 150px;
+    background-color: rgb(63, 145, 57);
+    width: fit-content;
+    height: fit-content;
     margin: 60px;
     padding: 10px;
+    padding-right: 30px;
+    box-shadow: 10px 10px 6px rgb(153, 151, 151);
+    border: 3px solid rgb(10, 88, 17);
+    color: rgb(178, 179, 180);
+    font-size: 20px;
+    text-shadow: 10px 10px 6px rgb(10, 88, 17);
 }
 
 .checkerBox:hover {
+    background: radial-gradient(rgb(46, 207, 46), rgb(26, 95, 26));
     padding: 12px;
+    padding-right: 30px;
     transition: 0.4s ease;
     box-shadow: 10px 10px 6px rgb(153, 151, 151);
+    border: 10px solid rgb(10, 88, 17);
+    border-radius: 7px;
+    color: antiquewhite;
 }
 
-label {
-    padding-bottom: 10px;
-    color: white;
+li {
+    list-style-type: square;
+    font-display: block;
 }
+
+
+
+
 
