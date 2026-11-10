@@ -1,0 +1,141 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+
+
+body {
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 10px;
+
+  display: grid;
+  width: clamp(100px, 80%, 1200px);
+  gap: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 6rem 4rem;
+  position: relative;
+  z-index: 1;
+  }
+
+  .container > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .header-info {
+    width: clamp(70px, 50%, 400px);
+    height: 10%;
+    z-index: 1;
+    position: relative;
+    padding: 40px;
+    top: 40px;
+    left:40px;
+  }
+
+  .header-info > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    z-index: -1;
+    right: 0px;
+    top: 0px;
+  }
+
+.background-header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  width: 30%;
+  margin-left: 8rem;
+  gap: 20px;
+  justify-content: center;
+  border: 1px solid rgb(0, 0, 0);
+  z-index: 1;
+  padding: 5rem 0px;
+}
+
+.header-image{
+  border: 1px solid rgb(0, 0, 0);
+  z-index: 1;
+  background-color: white;
+}
+
+.header-image > img {
+  box-shadow: 10px 10px 30px rgb(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+
+}
+
+
+
+/*
+.circle {
+  flex-basis: auto;
+  border: 1px solid rgb(11, 10, 10);
+  width: 200px;
+  height: 200px;
+  background-color: rgb(0, 40, 42);
+  clip-path: path(
+    "M 10,40 L 70,40 A 10,10 0,0,0 80,30 L 80,10 A 10,10 0,0,1 90,0 L 140,0 A 10,10 0,0,1 150,10 L 150,190 A 10,10 0,0,1 140,200 L 10,200 A 10,10 0,0,1 0,190 L 0,50 A 10,10 0,0,1 10,40 Z"
+    );
+}*/
+
+/*
+.cylinder {
+  overflow: hidden;
+  position: relative;
+  margin-top: 50px;
+  width: 150px;
+  height: 130px;
+  background: rgb(208, 206, 206);
+  border-radius: 70px/40px;
+  box-shadow: 10px 30px 30px rgb(0, 0, 0, 0.7);
+}
+
+.one {
+  overflow: hidden;
+  position: relative;
+  margin-top: 50px;
+  width: 150px;
+  height: 100px;
+  background: rgb(208, 206, 206);
+  border-radius: 70px/40px;
+  box-shadow: 10px 30px 30px rgb(0, 0, 0, 0.7);
+}
+
+.three {
+  overflow: hidden;
+  position: relative;
+  margin-top: 50px;
+  width: 150px;
+  height: 180px;
+  background: rgb(208, 206, 206);
+  border-radius: 70px/40px;
+  box-shadow: 10px 30px 30px rgb(0, 0, 0, 0.7);
+}
+
+.cylinder::before {
+  background-image: radial-gradient(rgb(54, 53, 53) 5%, rgb(208, 206, 206) 90%);
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 70px;
+  border-radius: 100px/50px;
+}*/
+
+
+
+
+
+
